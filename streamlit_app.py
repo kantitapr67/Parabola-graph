@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 st.title('🌻Parabola graph☁️')
 st.badge(" Hi we are Four Seasons")
-# 1. Sidebar และ Widgets 3 ชนิด (selectbox, slider, number_input)
 parabola_type = st.sidebar.selectbox("รูปแบบ", ["แนวตั้ง: y = a(x-h)² + k", "แนวนอน: x = a(y-k)² + h"])
 a = st.sidebar.slider("ค่า a (ความกว้าง/ทิศทาง)", -3.0, 3.0, 1.0, 0.5)
 if a == 0: a = 0.01
@@ -22,7 +21,7 @@ with tab1:
     if "แนวตั้ง" in parabola_type:
         x = np.linspace(h - 5, h + 5, 200)
         y = a * (x - h)**2 + k
-        ax.plot(x, y, color="#B5838D", lw=2.5, label="Parabola")
+        ax.plot(x, y, color="p", lw=2.5, label="Parabola")
         direction = "หงาย (เปิดบน)" if a > 0 else "คว่ำ (เปิดล่าง)"
     else:
         y = np.linspace(k - 5, k + 5, 200)
@@ -45,7 +44,7 @@ with tab1:
 with tab2:
     st.subheader("📚 สมการพาราโบลา")
 
-    st.markdown("🔵 พาราโบลาแนวตั้ง")
+    st.markdown("🤎 พาราโบลาแนวตั้ง")
     st.latex(r"y = a(x-h)^2 + k")
 
     st.write("โดย")
@@ -54,7 +53,7 @@ with tab2:
     st.write("- k = พิกัด y ของจุดยอด")
     st.write("- จุดยอด คือ (h, k)")
 
-    st.markdown("🟢 พาราโบลาแนวนอน")
+    st.markdown("🤍 พาราโบลาแนวนอน")
     st.latex(r"x = a(y-k)^2 + h")
 
     st.write("โดย")
