@@ -6,20 +6,17 @@ st.badge(" Hi we are Four Seasons")
 parabola_type = st.sidebar.selectbox("รูปแบบ", ["แนวตั้ง: y = a(x-h)² + k", "แนวนอน: x = a(y-k)² + h"])
 a = st.sidebar.number_input("Enter a initial condition")
 if a == 0: a = 0.01
-
 h = st.sidebar.number_input("Enter h initial condition")
 k = st.sidebar.number_input("Enter k initial condition")
-st.sidebar.markdown("👥 สมาชิกในกลุ่ม")
+st.sidebar.markdown("👯 สมาชิกในกลุ่ม")
 st.sidebar.text("1. นางสาวกานต์ทิดา พรมด้าว\n2. นางสาวประภัสสร คำผง\n3. นางสาวรวิยา สืบสิมมา\n4. นางสาวนิศานาถ เดชคำภู")
 st.sidebar.divider()
 tab1, tab2 = st.tabs(["📊 กราฟ & วิเคราะห์", "📚 สูตร"])
 
 with tab1:
     col1, col2 = st.columns([2, 1])
-    
     fig, ax = plt.subplots(facecolor="#FFF9F9")
-    ax.set_facecolor("#F7F4FA")
-    
+    ax.set_facecolor("#F7F4FA")  
     if "แนวตั้ง" in parabola_type:
         x = np.linspace(h - 5, h + 5, 200)
         y = a * (x - h)**2 + k
@@ -29,36 +26,29 @@ with tab1:
         y = np.linspace(k - 5, k + 5, 200)
         x = a * (y - k)**2 + h
         ax.plot(x, y, color="#83A5B5", lw=2.5, label="Parabola")
-        direction = "เปิดขวา" if a > 0 else "เปิดซ้าย"
-        
+        direction = "เปิดขวา" if a > 0 else "เปิดซ้าย"   
     ax.plot(h, k, 'o', color="#E56B6F", label=f"Vertex ({h}, {k})")
     ax.grid(True, linestyle=":", alpha=0.5)
-    ax.legend()
-    
+    ax.legend()  
     with col1:
-        st.pyplot(fig)
-        
+        st.pyplot(fig)     
     with col2:
         st.subheader("พฤติกรรมกราฟ")
         st.metric("จุดยอด (h, k)", f"({h}, {k})")
         st.metric("ทิศทางการเปิด", direction)
 
 with tab2:
-    st.subheader("📚 สมการพาราโบลา")
-
-    st.markdown("🤎 พาราโบลาแนวตั้ง")
-    st.latex(r"y = a(x-h)^2 + k")
-
-    st.write("โดย")
-    st.write("- a = ค่าความกว้างและทิศทางการเปิด")
-    st.write("- h = พิกัด x ของจุดยอด")
-    st.write("- k = พิกัด y ของจุดยอด")
-    st.write("- จุดยอด คือ (h, k)")
-
-    st.markdown("🤍 พาราโบลาแนวนอน")
-    st.latex(r"x = a(y-k)^2 + h")
-
-    st.write("โดย")
-    st.write("- a > 0 → เปิดไปทางขวา")
-    st.write("- a < 0 → เปิดไปทางซ้าย")
-    st.write("- จุดยอด คือ (h, k)")
+st.subheader("📚 สมการพาราโบลา")
+st.markdown("🤎 พาราโบลาแนวตั้ง")
+st.latex(r"y = a(x-h)^2 + k")
+st.write("โดย")
+st.write("- a = ค่าความกว้างและทิศทางการเปิด")
+st.write("- h = พิกัด x ของจุดยอด")
+st.write("- k = พิกัด y ของจุดยอด")
+st.write("- จุดยอด คือ (h, k)")
+st.markdown("🤍 พาราโบลาแนวนอน")
+st.latex(r"x = a(y-k)^2 + h")
+st.write("โดย")
+st.write("- a > 0 → เปิดไปทางขวา")
+st.write("- a < 0 → เปิดไปทางซ้าย")
+st.write("- จุดยอด คือ (h, k)")
