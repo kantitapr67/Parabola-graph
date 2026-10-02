@@ -5,7 +5,7 @@ st.title('🌻Parabola graph☁️')
 st.badge(" Hi we are Four Seasons")
 st.subheader("📚 สมการพาราโบลา")
 
-    st.markdown("### 🔵 พาราโบลาแนวตั้ง")
+    st.markdown("🔵 พาราโบลาแนวตั้ง")
     st.latex(r"y = a(x-h)^2 + k")
 
     st.write("โดย")
@@ -14,7 +14,7 @@ st.subheader("📚 สมการพาราโบลา")
     st.write("- k = พิกัด y ของจุดยอด")
     st.write("- จุดยอด คือ (h, k)")
 
-    st.markdown("### 🟢 พาราโบลาแนวนอน")
+    st.markdown("🟢 พาราโบลาแนวนอน")
     st.latex(r"x = a(y-k)^2 + h")
 
     st.write("โดย")
