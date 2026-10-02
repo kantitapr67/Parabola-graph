@@ -7,8 +7,8 @@ parabola_type = st.sidebar.selectbox("รูปแบบ", ["แนวตั้�
 a = st.sidebar.number_input("Enter a initial condition")
 if a == 0: a = 0.01
 
-h = st.sidebar.number_input("ค่า h", value=0.0)
-k = st.sidebar.number_input("ค่า k", value=0.0)
+h = st.sidebar.number_input("Enter h initial condition")
+k = st.sidebar.number_input("Enter k initial condition")
 
 tab1, tab2 = st.tabs(["📊 กราฟ & วิเคราะห์", "📚 สูตร"])
 
