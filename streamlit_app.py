@@ -37,8 +37,7 @@ with tab1:
         st.metric("จุดยอด (h, k)", f"({h}, {k})")
         st.metric("ทิศทางการเปิด", direction)
         if "แนวตั้ง" in parabola_type:
-            tipo = "จุดต่ำสุด" 
-        if a > 0 else "จุดสูงสุด"
+            tipo = "จุดต่ำสุด" if a > 0 else "จุดสูงสุด"
             st.metric(tipo, f"({h}, {k})")
 
 with tab2:
