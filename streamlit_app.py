@@ -9,7 +9,9 @@ if a == 0: a = 0.01
 
 h = st.sidebar.number_input("Enter h initial condition")
 k = st.sidebar.number_input("Enter k initial condition")
-
+st.sidebar.markdown("👥 สมาชิกในกลุ่ม")
+st.sidebar.text("1. นางสาวกานต์ทิดา พรมด้าว\n2. นางสาวประภัสสร คำผง\n3. นางสาวรวิยา สืบสิมมา\n4. นางสาวนิศานาถ เดชคำภู")
+st.sidebar.divider()
 tab1, tab2 = st.tabs(["📊 กราฟ & วิเคราะห์", "📚 สูตร"])
 
 with tab1:
