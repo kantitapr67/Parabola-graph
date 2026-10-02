@@ -38,7 +38,7 @@ with tab1:
         st.metric("ทิศทางการเปิด", direction)
 
 with tab2:
-st.subheader("📚 สมการพาราโบลา")
+    st.subheader("📚 สมการพาราโบลา")
 st.markdown("🤎 พาราโบลาแนวตั้ง")
 st.latex(r"y = a(x-h)^2 + k")
 st.write("โดย")
