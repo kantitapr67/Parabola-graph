@@ -4,7 +4,7 @@ import numpy as np
 st.title('🌻Parabola graph☁️')
 st.badge(" Hi we are Four Seasons")
 parabola_type = st.sidebar.selectbox("รูปแบบ", ["แนวตั้ง: y = a(x-h)² + k", "แนวนอน: x = a(y-k)² + h"])
-a = st.sidebar.number_input("ค่า a (ความกว้าง/ทิศทาง)"))
+a = st.sidebar.number_input("ค่า a ", value=0.0)
 if a == 0: a = 0.01
 
 h = st.sidebar.number_input("ค่า h", value=0.0)
